@@ -12,7 +12,7 @@ En mi caso, analicé el sitio web `http://neverssl.com`. Este sitio me sirve par
 
 Analizando el sitio web mediante DevTools, pude observar la siguiente información:
 
-- URL: `http://lushbrightsilvermorning.neverssl.com/online/`
+- URL completa observada: `http://lushbrightsilvermorning.neverssl.com/online/`
 - Método: `GET`
 - Host: `lushbrightsilvermorning.neverssl.com`
 - Versión: `HTTP/1.1`
@@ -47,9 +47,10 @@ Usar una web HTTP conectado desde una red Wi-Fi pública representa un riesgo po
 
 ## Cómo ayuda una VPN
 
-Conectarse a una VPN antes de entrar a un sitio web con protocolo HTTP mejora la seguridad al utilizar un túnel cifrado entre nuestro dispositivo y el servidor VPN. Aunque otra persona en la red Wi-Fi pública pueda detectar que existe tráfico, el cifrado dificulta que pueda leer su contenido. Sin embargo, la VPN no reemplaza HTTPS, ya que el túnel cifrado termina en el servidor VPN.
+Una VPN crea un túnel cifrado entre el dispositivo del usuario y el servidor VPN. Esto protege el tráfico frente a otros usuarios conectados a la misma red Wi-Fi pública.
+Con una VPN activa, Wireshark seguiría mostrando tráfico de red, pero la información viajaría cifrada dentro del túnel VPN. Por eso, datos que sin VPN pude observar directamente, como la petición GET, el Host y los headers HTTP, ya no serían legibles de la misma manera.
 
-**Comparación en Wireshark:** En la captura realizada sin VPN fue posible observar en texto plano la petición GET, el Host y diferentes headers HTTP. Si estuviera conectado a una VPN, Wireshark seguiría detectando tráfico de red, pero el contenido transportado dentro del túnel VPN estaría cifrado. Por lo tanto, estos datos HTTP no podrían observarse de forma legible desde la interfaz por la que circula el túnel VPN. Esto proporciona mayor protección frente a la interceptación del tráfico en una red Wi-Fi pública.
+**Comparación en Wireshark:** En la captura realizada sin VPN fue posible observar en texto plano la petición GET, el Host y diferentes headers HTTP. Si estuviera conectado a unaUna VPN crea un túnel cifrado entre el dispositivo del usuario y el servidor VPN. Esto protege el tráfico frente a otros usuarios conectados a la misma red Wi-Fi pública.
 
 ## 3 reglas de oro
 
