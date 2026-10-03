@@ -50,8 +50,6 @@ Usar una web HTTP conectado desde una red Wi-Fi pública representa un riesgo po
 Una VPN crea un túnel cifrado entre el dispositivo del usuario y el servidor VPN. Esto protege el tráfico frente a otros usuarios conectados a la misma red Wi-Fi pública.
 Con una VPN activa, Wireshark seguiría mostrando tráfico de red, pero la información viajaría cifrada dentro del túnel VPN. Por eso, datos que sin VPN pude observar directamente, como la petición GET, el Host y los headers HTTP, ya no serían legibles de la misma manera.
 
-**Comparación en Wireshark:** En la captura realizada sin VPN fue posible observar en texto plano la petición GET, el Host y diferentes headers HTTP. Si estuviera conectado a unaUna VPN crea un túnel cifrado entre el dispositivo del usuario y el servidor VPN. Esto protege el tráfico frente a otros usuarios conectados a la misma red Wi-Fi pública.
-
 ## 3 reglas de oro
 
 1. **Verificar que el sitio utilice HTTPS:** antes de introducir información personal, comprobar que la conexión utiliza HTTPS. Esto permite que la comunicación entre el navegador y el sitio esté protegida mediante TLS. HTTPS no garantiza que el sitio sea legítimo, pero sí protege los datos durante su transmisión.
