@@ -19,6 +19,11 @@ Analizando el sitio web mediante DevTools, pude observar la siguiente informaci�
 - Referer: `http://neverssl.com/`
 - Accept-Language: `en-US,en;q=0.5`
 
+### Evidencias en DevTools
+
+![Evidencia HTTP en DevTools](evidencias/evidencia%20neverssl%200.png)
+
+![Headers HTTP observados en DevTools](evidencias/evidencia%20neverssl.png)
 ## Análisis del tráfico HTTP con Wireshark
 
 Al analizar el tráfico mediante Wireshark utilizando el filtro `http`, pude identificar una petición GET realizada desde mi equipo hacia el servidor de NeverSSL. En la captura se observa la petición `GET / HTTP/1.1` y el Host `brightclearshininglight.neverssl.com`, por lo que la URL completa solicitada es:
@@ -28,6 +33,9 @@ Al analizar el tráfico mediante Wireshark utilizando el filtro `http`, pude ide
 También fue posible observar en texto plano diferentes headers de la solicitud, como User-Agent, Accept, Accept-Language y Connection.
 
 Esta captura demuestra el riesgo de utilizar HTTP, ya que estos datos pueden observarse de forma legible al analizar el tráfico de red. Al no existir cifrado TLS en esta comunicación HTTP, un atacante que consiga interceptar el tráfico podría acceder a información transmitida mediante la conexión, comprometiendo su confidencialidad.
+### Evidencia en Wireshark
+
+![Petición HTTP capturada con Wireshark](evidencias/wireshark%20trabajo%206%20parte%202%20%281%29.png)
 
 ## Riesgos encontrados
 
