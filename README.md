@@ -36,7 +36,11 @@ Esta captura demuestra el riesgo de utilizar HTTP, ya que estos datos pueden obs
 ### Evidencia en Wireshark
 
 ![Petición HTTP capturada con Wireshark](evidencias/wireshark%20trabajo%206%20parte%202%20%281%29.png)
+### Archivo de captura
 
+El archivo de captura utilizado durante el análisis está disponible para su revisión:
+
+[Descargar captura de tráfico HTTP (.pcapng)](evidencias/captura-http-neverssl.pcapng)
 ## Riesgos encontrados
 
 Usar una web HTTP conectado desde una red Wi-Fi pública representa un riesgo porque el tráfico no está cifrado. Si un atacante logra interceptarlo, podría comprometerse la confidencialidad de información como credenciales, datos introducidos en formularios, mensajes o cookies de sesión.
