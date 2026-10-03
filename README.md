@@ -33,6 +33,7 @@ Al analizar el tráfico mediante Wireshark utilizando el filtro `http`, pude ide
 También fue posible observar en texto plano diferentes headers de la solicitud, como User-Agent, Accept, Accept-Language y Connection.
 
 Esta captura demuestra el riesgo de utilizar HTTP, ya que estos datos pueden observarse de forma legible al analizar el tráfico de red. Al no existir cifrado TLS en esta comunicación HTTP, un atacante que consiga interceptar el tráfico podría acceder a información transmitida mediante la conexión, comprometiendo su confidencialidad.
+A diferencia de HTTP, HTTPS utiliza TLS para cifrar la comunicación entre el navegador y el servidor. Esto evita que el contenido transmitido pueda observarse directamente en texto plano mediante una captura de tráfico como la realizada en esta práctica.
 ### Evidencia en Wireshark
 
 ![Petición HTTP capturada con Wireshark](evidencias/wireshark-http.png)
